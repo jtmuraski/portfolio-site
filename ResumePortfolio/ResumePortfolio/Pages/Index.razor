@@ -1,5 +1,6 @@
 ﻿@page "/"
 @layout NullLayout
+@inject NavigationManager _navManager
 
 
 <PageTitle>John Muraski's' Resume</PageTitle>
@@ -34,9 +35,9 @@
         <p>Currently, I work on automating manufacturing data and processes by building out Industrial Internet of Things services in order to allow the factory to run faster and more efficiently. I am always open to helping solve more problems, and if you would like to learn more about me, please press one of the buttons below and see what I am about!</p>
     </div>
     <div class="heroButtons">
-        <NavLink class="indexBtn" href="Timeline">Resume</NavLink>
-        <NavLink href="Projects">Projects</NavLink>
-        <NavLink href="About">About Me</NavLink>
+        <button @onclick='() => _navManager.NavigateTo("Timeline")'>Resume</button>
+        <button @onclick='() => _navManager.NavigateTo("Projects")'>Projects</button>
+        <button @onclick='() => _navManager.NavigateTo("About")'>About Me</button>
     </div>
 </div>
 
