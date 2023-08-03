@@ -1,0 +1,47 @@
+[
+  {
+    "Company": "Logisolve",
+    "Title": "Workflow Automation Analyst",
+    "LocationCity": "Oakdale",
+    "LocationState": "MN",
+    "StartDateMonth": "November",
+    "StartDateYear": 2020,
+    "EndDateMonth": null,
+    "EndDateYear": 0,
+    "IsPresentJob": true,
+    "ShortSummary": "Develop and maintain automated workflows for a manufacturing facility",
+    "Description": " Develop and maintain automatted workflows in a manufacturing enviornment",
+    "Achievements": [ "Automated production reporting process", "Machine monitoring system" ],
+    "Awards": [ "Quality Cup" ]
+  },
+  {
+    "Company": "Surgical Technologies Inc",
+    "Title": "Manufacturing Engineering Technician",
+    "LocationCity": "Saint Paul",
+    "LocationState": "MN",
+    "StartDateMonth": "October",
+    "StartDateYear": 2018,
+    "EndDateMonth": "October",
+    "EndDateYear": 2020,
+    "IsPresentJob": true,
+    "ShortSummary": "Develop and maintain Manufacturing Procedures in accordance with ISO 13485 FDA CFR Part 21",
+    "Description": "Develop and maintain Manufacturing Procedures in accordance with ISO 13485 FDA CFR Part 21 in a medical device manufacturing environment.",
+    "Achievements": [ "Saved company lots of money", "Made lots of stuff" ],
+    "Awards": null
+  },
+  {
+    "Company": "Surgical Technologies Inc",
+    "Title": "Manufacturing Lead",
+    "LocationCity": "Saint Paul",
+    "LocationState": "MN",
+    "StartDateMonth": "November",
+    "StartDateYear": 2015,
+    "EndDateMonth": "October",
+    "EndDateYear": 2018,
+    "IsPresentJob": true,
+    "ShortSummary": "Led a team of 30+ Operators and Line Trainers in a fast paced medical device manufacturing environment",
+    "Description": "Led a team of 30+ Operators and Line Trainers in a fast paced medical device manufacturing environment",
+    "Achievements": [ "Saved company lots of money", "Made lots of stuff" ],
+    "Awards": null
+  }
+]
