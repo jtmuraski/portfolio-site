@@ -1,12 +1,12 @@
 ﻿
 <div>
-    <b>Title:</b> @job.Title <br />
-    <b>Company:</b> @job.Company <br />
-    <p>@job.ShortSummary</p>
+    <b>Title:</b> @Job.Title <br />
+    <b>Company:</b> @Job.Company <br />
+    <p>@Job.ShortSummary</p>
 </div>
 
 @code
 {
     [Parameter]
-    public Job job { get; set; }
+    public Job Job { get; set; }
 }

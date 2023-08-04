@@ -5,15 +5,17 @@
 
 @foreach(var job in jobs)
 {
-    <ResumePortfolio.Components.JobSummary job=@job />
+    <JobSummary Job=@job />
 }
 
 @code {
-    private List<Job> jobs = new List<Job>();
+    private List<Job>? jobs = new List<Job>();
 
     protected override async Task OnInitializedAsync()
     {
-        jobs = await Http.GetFromJsonAsync<List<Job>>("data/jobs.json");
+        var filePath = "Data/JobHistory.json";
+        var json = System.IO.File.ReadAllText(filePath);
+        jobs = JsonConvert.DeserializeObject<List<Job>>(json);
     }
 
 }
