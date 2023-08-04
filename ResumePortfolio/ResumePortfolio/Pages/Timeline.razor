@@ -1,8 +1,19 @@
 ﻿@page "/Timeline"
+@inject HttpClient Http
 
 <h3>Timeline</h3>
 
+@foreach(var job in jobs)
+{
+    <ResumePortfolio.Components.JobSummary job=@job />
+}
+
 @code {
-    List<Job> jobs = new List<Job>();
+    private List<Job> jobs = new List<Job>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        jobs = await Http.GetFromJsonAsync<List<Job>>("data/jobs.json");
+    }
 
 }

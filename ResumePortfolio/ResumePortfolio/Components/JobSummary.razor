@@ -1,0 +1,12 @@
+﻿
+<div>
+    <b>Title:</b> @job.Title <br />
+    <b>Company:</b> @job.Company <br />
+    <p>@job.ShortSummary</p>
+</div>
+
+@code
+{
+    [Parameter]
+    public Job job { get; set; }
+}
