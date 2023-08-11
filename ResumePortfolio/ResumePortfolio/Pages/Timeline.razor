@@ -13,9 +13,17 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var filePath = "Data/JobHistory.json";
-        var json = System.IO.File.ReadAllText(filePath);
-        jobs = JsonConvert.DeserializeObject<List<Job>>(json);
+        var filePath = "/Data/JobHistory.json";
+        try
+        {
+            var json = System.IO.File.ReadAllText(filePath);
+            jobs = JsonConvert.DeserializeObject<List<Job>>(json);
+        }
+        catch(Exception ex)
+        {
+            
+        }
+
     }
 
 }
