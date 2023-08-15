@@ -1,0 +1,12 @@
+﻿<div id="@id">
+    <p>An unexpected error occured, see below for details: <br /></p>
+    @message
+</div>
+
+@code {
+    [Parameter]
+    public string? message { get; set; }
+
+    [Parameter]
+    public string? id { get; set; } = "error-notification";
+}

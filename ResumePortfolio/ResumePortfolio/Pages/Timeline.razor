@@ -3,17 +3,32 @@
 
 <h3>Timeline</h3>
 
-@foreach(var job in jobs)
+@if (errorMessage != null)
 {
-    <JobSummary Job=@job />
+    <ErrorMessage id="error-notification" message=@errorMessage />
 }
+
+@if(jobs == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var job in jobs)
+    {
+        <JobSummary Job=@job />
+    }
+
+}
+
 
 @code {
     private List<Job>? jobs = new List<Job>();
+    private string? errorMessage;
 
     protected override async Task OnInitializedAsync()
     {
-        var filePath = "/Data/JobHistory.json";
+        var filePath = "../Data/JobHistory.json";
         try
         {
             var json = System.IO.File.ReadAllText(filePath);
@@ -21,9 +36,14 @@
         }
         catch(Exception ex)
         {
-            
+            errorMessage = ex.ToString();
         }
 
+    }
+
+    public void Dispose()
+    {
+        errorMessage = null;
     }
 
 }
