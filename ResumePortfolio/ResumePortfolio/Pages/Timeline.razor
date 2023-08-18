@@ -8,18 +8,23 @@
     <ErrorMessage id="error-notification" message=@errorMessage />
 }
 
-@if(jobs == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    @foreach (var job in jobs)
-    {
-        <JobSummary Job=@job />
-    }
-
-}
+<div class="resumeContainer">
+    <div class="timeline">
+        @if (jobs == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            @foreach (var job in jobs)
+            {
+                <JobSummary Job=@job />
+            }
+        }
+    </div>
+    <div class="jobDetails">
+    </div>
+</div>
 
 
 @code {
@@ -31,8 +36,7 @@ else
         var filePath = "../Data/JobHistory.json";
         try
         {
-            var json = System.IO.File.ReadAllText(filePath);
-            jobs = JsonConvert.DeserializeObject<List<Job>>(json);
+           jobs = await Http.GetFromJsonAsync<List<Job>>(filePath);
         }
         catch(Exception ex)
         {
